@@ -1,4 +1,4 @@
-package com.ruscigno.rest.webservices.restfulwebservices;
+package com.ruscigno.rest.webservices.restfulwebservices.helloworld;
 
 public class HelloWorldBean {
 
