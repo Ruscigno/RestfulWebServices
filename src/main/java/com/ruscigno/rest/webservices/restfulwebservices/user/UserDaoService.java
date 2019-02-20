@@ -2,7 +2,9 @@ package com.ruscigno.rest.webservices.restfulwebservices.user;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
@@ -34,5 +36,16 @@ public class UserDaoService {
 	
 	public User findOne(int id) {
 		return users.stream().filter(user -> user.getId().equals(id)).findFirst().orElse(null);
+	}
+	
+	public User deleteById(int id) {
+		Iterator<User> iterator = users.stream().filter(user -> user.getId().equals(id)).collect(Collectors.toList()).iterator();
+		if (iterator.hasNext()) {
+			User user = iterator.next();
+			iterator.remove();
+			return user;
+		}else {
+			return null;
+		}
 	}
 }
