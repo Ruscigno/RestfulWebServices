@@ -14,7 +14,7 @@ import com.ruscigno.rest.webservices.restfulwebservices.post.Post;
 public class UserDaoService {
 
 	private static List<User> users = new ArrayList<>();
-	private static int usersCount=3;
+	private static int usersCount = 3;
 
 	static {
 		users.add(new User(1, "Adam", new Date()));
@@ -33,19 +33,19 @@ public class UserDaoService {
 		users.add(user);
 		return user;
 	}
-	
+
 	public User findOne(int id) {
 		return users.stream().filter(user -> user.getId().equals(id)).findFirst().orElse(null);
 	}
-	
+
 	public User deleteById(int id) {
-		Iterator<User> iterator = users.stream().filter(user -> user.getId().equals(id)).collect(Collectors.toList()).iterator();
-		if (iterator.hasNext()) {
-			User user = iterator.next();
-			iterator.remove();
-			return user;
-		}else {
-			return null;
+		for (Iterator<User> i = users.iterator(); i.hasNext();) {
+			User user = i.next();
+			if (user.getId().equals(id)) {
+				i.remove();
+				return user;
+			}
 		}
+		return null;
 	}
 }
