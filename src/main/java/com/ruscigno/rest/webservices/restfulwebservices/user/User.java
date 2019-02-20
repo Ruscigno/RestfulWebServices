@@ -10,12 +10,12 @@ public class User {
 		super();
 		this.id = id;
 		this.name = name;
-		this.bithDate = bithDate;
+		this.birthDate = bithDate;
 	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", bithDate=" + bithDate + "]";
+		return "User [id=" + id + ", name=" + name + ", bithDate=" + birthDate + "]";
 	}
 
 	public Integer getId() {
@@ -35,14 +35,14 @@ public class User {
 	}
 
 	public Date getBithDate() {
-		return bithDate;
+		return birthDate;
 	}
 
 	public void setBithDate(Date bithDate) {
-		this.bithDate = bithDate;
+		this.birthDate = bithDate;
 	}
 
 	private String name;
-	private Date bithDate;
+	private Date birthDate;
 
 }
