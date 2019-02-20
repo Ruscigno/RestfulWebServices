@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.ruscigno.rest.webservices.restfulwebservices.post.Post;
+
 @Component
 public class UserDaoService {
 

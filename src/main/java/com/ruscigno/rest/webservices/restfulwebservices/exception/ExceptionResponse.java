@@ -1,4 +1,4 @@
-package com.ruscigno.rest.webservices.restfulwebservices.user.exception;
+package com.ruscigno.rest.webservices.restfulwebservices.exception;
 
 import java.util.Date;
 

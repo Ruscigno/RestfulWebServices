@@ -5,6 +5,8 @@ import java.util.Date;
 public class User {
 
 	private Integer id;
+	private String name;
+	private Date birthDate;
 
 	public User(Integer id, String name, Date bithDate) {
 		super();
@@ -21,7 +23,7 @@ public class User {
 	public Integer getId() {
 		return id;
 	}
- 
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -41,8 +43,5 @@ public class User {
 	public void setBithDate(Date bithDate) {
 		this.birthDate = bithDate;
 	}
-
-	private String name;
-	private Date birthDate;
 
 }
