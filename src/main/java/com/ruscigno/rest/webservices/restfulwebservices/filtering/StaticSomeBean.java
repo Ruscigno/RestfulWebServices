@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(value = { "field1", "field2" })
-public class SomeBean {
+public class StaticSomeBean {
 
 	private String field1;
 	private String field2;
@@ -14,7 +14,7 @@ public class SomeBean {
 
 	private String field4;
 
-	public SomeBean(String field1, String field2, String field3, String field4) {
+	public StaticSomeBean(String field1, String field2, String field3, String field4) {
 		super();
 		this.field1 = field1;
 		this.field2 = field2;
